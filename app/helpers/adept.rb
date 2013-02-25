@@ -13,10 +13,13 @@ module Rise
       #
       # Returns the name of the currently plugged-in board.
       #
-      def connected_adept_board(default = 'No board connected.')
-        return default if Adept::Device.connected_devices.empty?
-        return "Digilent #{Adept::Device.connected_devices.first[:name]}"
+      def connected_adept_board
+        devices = Adept::Device.connected_devices
+
+        return nil if devices.empty?
+        return %Q{<span class="connected">Digilent #{devices.first[:name]}</span>}
       end
+
 
     end
 

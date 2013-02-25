@@ -9,17 +9,16 @@
       .nav-collapse
 
         %ul.nav
-          %li.active
-            %a{:href => "#"} Project
-          %li
-            %a{:href => "lookinside"} Look Inside
+          = navigation_link('Project')
+          = navigation_link('Look Inside')
+
 
         %form.navbar-form.pull-right
           .input-append.input-prepend
             %span.add-on
               %i Board
             %span.uneditable-input#connected_board 
-              = connected_adept_board
+              Loading...
             %button.btn{:type => 'button', :'data-loading-text' => '...'}
               %i.icon-refresh
 

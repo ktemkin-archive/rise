@@ -3,5 +3,5 @@ require 'bundler'
 
 Bundler.require
 
-require './app/app'
+require './app/rise_app'
 run RiseApp

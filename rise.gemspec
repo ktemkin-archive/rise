@@ -27,7 +27,8 @@ Gem::Specification.new do |gem|
   gem.add_dependency               'compass',   '~>0.12.2'
   gem.add_dependency               'ruby-adept'
   gem.add_dependency               'ruby-ise'
-  gem.add_development_dependency   'rspec',     '~>1.3.0'
+  gem.add_development_dependency   'rspec',     '~>2.12.0'
+  gem.add_development_dependency   'rack-test', '~>0.6.2'
   gem.add_development_dependency   'rake',      '~>10.0.3'
   gem.add_dependency               'haml',      '~> 4.0.0'
 

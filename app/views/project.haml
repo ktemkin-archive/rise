@@ -3,15 +3,23 @@
   = haml :'shared/head'
   %body
     = haml :'shared/navbar'
-    .container
-      %h1 Bootstrap starter template
-      %p
-        Use this document as a way to quick start any new project.
-        %br/
-        All you get is this message and a barebones HTML document.
+    .container-fluid
+      .row-fluid
+        .span6
+          %h4 Programming
+          .well 
+            .form-inline.right-align
+              .row#program_alerts
+              .row
+                %a#bitfile{type: 'file', value: most_recent_bit_file, accept:'.bit'}
+              .row.spaced
+                %button.btn.btn-primary.disabled#program_board{ 'data-loading-text' => '...' }  Program
+
+
+        .span6
+          %h4 Project Settings
+          .well This panel hasn't been implemented yet. Check back soon!
         
-        %pre 
-          &= Adept::Device.connected_devices
-    / /container
   = haml :'shared/foot'
+  = js :project
 

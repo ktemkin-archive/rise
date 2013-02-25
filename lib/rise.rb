@@ -1,5 +1,3 @@
 require "rise/version"
-
-module Rise
-  # Your code goes here...
-end
+require 'rise/device'
+require 'rise/response'
